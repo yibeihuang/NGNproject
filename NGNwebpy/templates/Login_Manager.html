@@ -1,0 +1,22 @@
+$def with(form, cssfiles)
+
+
+<html>
+
+
+ <head>
+    <meta charset="UTF-8">
+    <title>Login_Manager</title>
+
+   <link href="$cssfiles" rel="stylesheet" type="text/css">
+  </head>
+
+ <body>
+	<h1 align="center">Login Manager</h1>
+ 	<form method="POST" >
+    		$:form.render()
+	</form>
+
+ </body>
+
+</html>

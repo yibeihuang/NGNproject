@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript">
+UserID and Password*/
+function passuser(form) {
+if (form.user.value=="weizhong") {   //判断用户名是否正确
+if (form.password.value=="weizhong") {    //判断密码是否正确          
+location="main.html"  //跳转页面
+} else {
+alert("Invalid Password")
+}
+} else {  alert("Invalid UserID")
+}
+}
+function my_cancel(form)
+{
+ form.account.value="";
+ form.password.value="";
+}
+</script>
+</head>
+<body>
+
+<center>
+
+<table bgcolor="white" cellpadding="12" border="1">
+<tr><td colspan="2"><center><h1><i><b>Login
+Area</b></i></h1></center></td></tr>
+
+<tr><td><h1><i><b>UserID:</b></i></h1></td><td>
+<form name="login">
+<input name="user" type="text"></td></tr>
+
+<tr><td><h1><i><b>Password:</b></i></h1></td><td>
+<input name="password" type="password"></td></tr>
+
+<tr>
+<td><center><input type="button" value="Login"
+onClick="passuser(login)"></center></td>
+
+<td><center><br><input type="button" value="reset" 
+onClick="my_cancel(login)"></form></td>
+</tr>
+
+</table>
+</center>
+</body>
+
+
+
+
+
+

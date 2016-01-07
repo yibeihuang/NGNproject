@@ -1,0 +1,43 @@
+$def with (todos, cssfiles)
+<!--this html is used for drawing User Data on Manager website and calculate Bill -->
+<html>
+  <head>
+      
+
+    <style type="text/css">
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 15px;
+    }
+    </style>
+       <link href="$cssfiles" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+    <form method="post" action="add">
+    <table align="center" bgcolor="#ffe5ff">
+    <tr>
+    <th>IPs</th>
+    <th>UserName</th>   
+    <th>Electricity</th>
+    <th>Time</th>
+    <th>Bill</th>
+    </tr>
+    
+   $for todo in todos: 
+      <tr>
+      <td id="$todo.IPs">$todo.IPs</td>
+      <td id="$todo.UserName">$todo.UserName</td>
+      <td id="$todo.Electricity">$todo.Electricity</td>
+      <td id="$todo.Time">$todo.Time</td>
+      <td><input type="text" name=$todo.UserName><input type="submit" value="Add" ></td>
+      </tr>
+    </table>
+   </form>
+
+  </body>
+</html>

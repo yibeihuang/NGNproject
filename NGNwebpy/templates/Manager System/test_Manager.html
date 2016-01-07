@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+  <meta charset="utf-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+  <title>Manager Login Form</title>
+  <!--<link rel="stylesheet" href="css/style.css">-->
+  <script language="javascript">
+   /*UserID and Password*/
+  function passuser(form) {
+    if (form.username.value=="Manager") {   //check whether username is correct
+    if (form.password.value=="123") {    //check whether password is correct         
+    window.location.href= "managementmenu.html"; //jump to another html !!!!!to be modified
+    } 
+    else {
+      alert("Invalid Password");
+      }
+    } 
+    else 
+      {  alert("Invalid UserID"); 
+      }
+    }
+
+  function my_cancel(form)
+   {
+      form.username.value="";
+      form.password.value="";
+    }
+</script>
+</head>
+
+<body>
+<link href="css/body.css" rel='stylesheet' type='text/css'>
+<div class="logo"></div>
+<div class="login-block">
+    <h1>Login</h1>
+    <!--<button id="login_1">User</button>-->
+    <center><button id="login_1">Manager</button></center>
+    <h2></h2>
+    <form name="login_manager">
+    <input type="text" placeholder="Username" name="username" id="username">
+    <input type="password" placeholder="Password" name="password" id="password">
+
+   
+    <tr>
+    <td><button onClick="passuser(login_manager)">Login</button> </td>
+    <td><button onClick="my_cancel(login_manager)">Reset</button> </td>
+    </tr>
+
+    <div class="login-help">
+    <center><a href="#">Register</a>
+    <a class="pos_left" href="#">Forgot Password</a></center>
+    </form>
+  </div>
+    
+</div>
+
+
+</body>

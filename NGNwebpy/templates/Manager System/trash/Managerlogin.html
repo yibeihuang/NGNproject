@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+  <meta charset="utf-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+  <title>Manager Login Form</title>
+  <!--<link rel="stylesheet" href="css/style.css">-->
+
+<!-- tend to change in the future, improved through CSS -->
+  <style type="text/css">
+   h1.title {color: blue; text-align: center; font-family: verdana}
+   form.location{text-align: center;}
+
+   section.location{text-align: center;margin-bottom: 2px} 
+
+  </style>
+
+  <script language="javascript">
+   /*UserID and Password*/
+  function passuser(form) {
+    if (form.User.value=="Manager") {   //check whether username is correct
+    if (form.password.value=="123") {    //check whether password is correct         
+    location="management menu.html"  //jump to another html
+    } 
+    else {
+      alert("Invalid Password")
+      }
+    } 
+    else 
+      {  alert("Invalid UserID") 
+      }
+    }
+
+  function my_cancel(form)
+   {
+      form.User.value="";
+      form.password.value="";
+    }
+</script>
+
+</head>
+
+<body>
+  <section class="container">
+    <div class="login">
+      <h1 class="title">Login for Electricity Company</h1>
+      <form method="post" action="..." class="location" name="loginform">
+        <p><input type="text" name="User" value="" placeholder="Username or Email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Remember me on this computer
+          </label>
+        </p>
+        <p class="submit"><input type="submit" name="Login" value="Login" onClick="passuser(loginform)" ></p>
+        <p class="submit"><input type="submit" name="Reset" value="Reset" onClick="my_cancel(loginform)" ></p>
+
+      </form>
+    </div>
+
+   <!-- <div class="login-help"> -->
+    <div style="text-align: center">
+      <p>Forgot your password? <a href="...">Click here to reset it</a>.</p>
+    </div>
+  </section>
+
+  <!--<section class="about">-->
+  <section style="text-align: center">
+    <p class="about-author">
+      &copy; 2015 
+      <br>
+      Developed by YBH,YXZ
+    </p>
+  </section>
+</body>
+</html>

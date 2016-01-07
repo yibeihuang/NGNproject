@@ -1,0 +1,22 @@
+$def with(form, cssfiles)
+
+
+<html>
+
+
+ <head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+
+    <link href="$cssfiles" rel="stylesheet" type="text/css">
+  </head>
+
+ <body>
+	<h1>Register</h1>
+ 	<form method="POST" >
+    	    $:form.render()
+	</form>
+
+ </body>
+
+</html>

@@ -1,0 +1,49 @@
+$def with (result,cssfiles)
+
+<html>
+  <head>   
+    <style type="text/css">
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 15px;
+    }
+    </style>
+    <link href="$cssfiles" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body>
+   
+    <table align="center"  bgcolor="#ffe5ff">
+    <tr>
+    <th>IPs</th>
+    <th>UserName</th>   
+    <th>Electricity</th>
+    <th>Time</th>
+    <th>Bill</th>
+    <!--<th>Operation</th>-->
+    </tr>
+    
+      <tr>
+      <td id="result.IPs">$result[0][0]</td>
+      <td id="result.UserName">$result[0][4]</td>
+      <td id="result.Electricity">$result[0][1]</td>
+      <td id="result.Time">$result[0][2]</td>
+      <td id="result.Bill">$result[0][3]</td>
+
+      </tr>
+
+      
+     <!-- <tr method="post" action="add1">
+      <td><input type="text" name="title" ></td><td> <input type="submit" value="Add" ></td>
+      </tr>
+      -->
+    </table>
+ 
+
+  </body>
+</html>
+

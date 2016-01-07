@@ -1,0 +1,29 @@
+$def with (cssfiles)
+
+<html>
+
+<head>
+    <style type="text/css">
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 15px;
+    }	
+    </style>
+    
+    <link href="$cssfiles" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<table>
+<tr>
+ <td><form action="login"><input type="submit" value="Manager Login" ></form></td>
+ <td><form action="login-user"><input type="submit" value="User Login"></form></td>
+ <td><form action="register"><input type="submit" value="Register"></form></td>
+</tr>
+</table>
+</body>
+</html>
